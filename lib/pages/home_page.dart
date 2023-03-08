@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mentalhealtapp/util/emoticon_face.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -58,7 +59,7 @@ class _HomePageState extends State<HomePage> {
             ),
 
             const SizedBox(
-              height: 20,
+              height: 25,
             ),
 
             // Search bar
@@ -74,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.white,
                   ),
                   SizedBox(
-                    width: 10,
+                    width: 5,
                   ),
                   Text(
                     'Search',
@@ -84,6 +85,95 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ],
               ),
+            ),
+
+            const SizedBox(
+              height: 25,
+            ),
+
+            // How do you feel
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                Text(
+                  'How do you feel?',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Icon(
+                  Icons.more_horiz,
+                  color: Colors.white,
+                )
+              ],
+            ),
+
+            const SizedBox(
+              height: 20,
+            ),
+
+            // 4 different faces
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Bad
+                Column(
+                  children: const [
+                    EmoticonFace(emoticonFace: '😩'),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Bad',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+
+                // Fine
+                Column(
+                  children: const [
+                    EmoticonFace(emoticonFace: '🙂'),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Fine',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+
+                // Well
+                Column(
+                  children: const [
+                    EmoticonFace(emoticonFace: '😄'),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Well',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                ),
+
+                // Excellent
+                Column(
+                  children: const [
+                    EmoticonFace(emoticonFace: '🤩'),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      'Excellent',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ],
+                )
+              ],
             )
           ],
         ),
